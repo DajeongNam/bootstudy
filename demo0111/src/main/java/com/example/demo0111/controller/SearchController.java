@@ -22,14 +22,7 @@ public class SearchController {
 
     @GetMapping("/movies")
     public List<Movie> getMoviesByQuery(@RequestParam String query) {
-        List<Movie> search = movieService.search(query);
-        return sortMovies(search);
-    }
-
-    private List<Movie> sortMovies(List<Movie> movies) {
-        return movies.stream()
-                .sorted((a, b) -> b.getUserRating() > a.getUserRating() ? 1 : -1)
-                .collect(Collectors.toList());
+        return movieService.search(query);
     }
 
     @GetMapping("/books")
