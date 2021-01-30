@@ -26,4 +26,21 @@ class MovieGroupTest {
         Assertions.assertThat("영화3").isEqualTo(orderedList.get(0).getTitle());
 
     }
+
+    @Test
+    public void 평점0_제외() throws Exception{
+        //given
+        MovieGroup movieGroup = new MovieGroup(Arrays.asList(
+                Movie.builder().title("영화1").link("http://test").userRating(0.0f).build(),
+                Movie.builder().title("영화2").link("http://test").userRating(8.7f).build(),
+                Movie.builder().title("영화3").link("http://test").userRating(9.7f).build()
+        ));
+
+        //when
+        List<Movie> orderedList = movieGroup.getListOrderRating();
+
+        //then
+        Assertions.assertThat(orderedList.size()).isEqualTo(2);
+
+    }
 }
