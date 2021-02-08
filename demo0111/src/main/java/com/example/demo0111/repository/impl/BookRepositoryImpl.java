@@ -1,6 +1,6 @@
 package com.example.demo0111.repository.impl;
 
-import com.example.demo0111.NaverProperties;
+import com.example.demo0111.config.NaverProperties;
 import com.example.demo0111.data.Book;
 import com.example.demo0111.data.ResponseBook;
 import com.example.demo0111.repository.BookRepository;

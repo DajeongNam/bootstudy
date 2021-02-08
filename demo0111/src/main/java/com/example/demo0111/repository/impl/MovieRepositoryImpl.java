@@ -3,7 +3,7 @@ package com.example.demo0111.repository.impl;
 import com.example.demo0111.data.Movie;
 import com.example.demo0111.data.ResponseMovie;
 import com.example.demo0111.repository.MovieRepository;
-import com.example.demo0111.NaverProperties;
+import com.example.demo0111.config.NaverProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
